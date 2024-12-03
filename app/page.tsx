@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main className="flex flex-col px-6 pt-6 mx-auto">
-      <h1 className="text-3xl font-bold mb-4">
+      <h1 className="text-3xl font-bold mb-6">
         Welkom bij <span className="text-indigo-500">Upstart</span>!
       </h1>
       <p className="text-base mb-6">

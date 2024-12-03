@@ -1,4 +1,4 @@
-import { DrawerAdd } from "@/components/drawer-add";
+import { DrawerView } from "@/components/drawer-view";
 import {
   Drawer,
   DrawerTrigger,
@@ -36,7 +36,7 @@ export const Navbar = () => {
           <DrawerTrigger asChild>
             <CirclePlusIcon strokeWidth="1" className="h-12 w-12" />
           </DrawerTrigger>
-          <DrawerAdd />
+          <DrawerView />
         </div>
       </Drawer>
 
