@@ -50,7 +50,7 @@ export function ExpensesChart() {
         <CardTitle className="text-xl">Uitgaven staafdiagram</CardTitle>
         <CardDescription>Deze week</CardDescription>
       </CardHeader>
-      <CardContent className="px-0">
+      <CardContent className="pl-0">
         <ChartContainer config={chartConfig} className="-ml-4">
           <BarChart accessibilityLayer data={expenses}>
             <CartesianGrid vertical={false} strokeWidth={2} />
