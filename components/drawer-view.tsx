@@ -37,7 +37,7 @@ export const DrawerView = () => {
 
   return (
     <DrawerContent onCloseAutoFocus={resetView}>
-      <div className="mx-auto w-full items-center flex flex-col pb-8 px-8">
+      <div className="mx-auto w-full items-center pb-8 px-8">
         <DrawerHeader className="relative w-full">
           {/* Dynamic Header */}
           {selectedView ? (
@@ -50,7 +50,9 @@ export const DrawerView = () => {
           ) : (
             <>
               <DrawerTitle className="text-xl">Wat wil je toevoegen?</DrawerTitle>
-              <DrawerDescription>Kies uit een van de vier mogelijkheden</DrawerDescription>
+              <DrawerDescription>
+                Kies uit een van de <span className="line-through text-gray-600">vier</span> twee mogelijkheden
+              </DrawerDescription>
             </>
           )}
         </DrawerHeader>

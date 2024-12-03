@@ -4,40 +4,39 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 
 export const DrawerExpenses = () => {
-   const [day, setDay] = useState<string>("Maandag");
-   const [amount, setAmount] = useState<string>("");
+  const [day, setDay] = useState<string>("Maandag");
+  const [amount, setAmount] = useState<string>("");
 
   const handleAddExpense = () => {
-    const parsedAmount = parseFloat(amount); 
+    const parsedAmount = parseFloat(amount); // Ensure the amount is a float
 
-     if (!amount || parsedAmount <= 0) {
-       alert("Vul een bedrag in");
-       return;
-     }
+    if (isNaN(parsedAmount) || parsedAmount <= 0) {
+      alert("Vul een geldig bedrag in");
+      return;
+    }
 
-     const newExpense = { day, amount }; // Change month to day
-     const existingData = JSON.parse(localStorage.getItem("expenses") || "[]");
+    const newExpense = { day, amount: parsedAmount }; // Ensure amount is a number, not a string
+    const existingData = JSON.parse(localStorage.getItem("expenses") || "[]");
 
-     // Update localStorage with the new expense
-     const updatedData = [...existingData];
-     const dayIndex = updatedData.findIndex((data: { day: string }) => data.day === day);
+    // Update localStorage with the new expense
+    const updatedData = [...existingData];
+    const dayIndex = updatedData.findIndex((data: { day: string }) => data.day === day);
 
-     if (dayIndex !== -1) {
-       // Update the amount for the selected day
-       updatedData[dayIndex].amount += amount;
-     } else {
-       // Add a new entry for the day if not present
-       updatedData.push(newExpense);
-     }
+    if (dayIndex !== -1) {
+      // If the day already has an expense, update the amount by adding the new one
+      updatedData[dayIndex].amount += parsedAmount;
+    } else {
+      // If the day doesn't have an expense, add the new entry
+      updatedData.push(newExpense);
+    }
 
-     localStorage.setItem("expenses", JSON.stringify(updatedData));
-     window.dispatchEvent(new Event("storage")); // Notify other components
+    localStorage.setItem("expenses", JSON.stringify(updatedData));
+    window.dispatchEvent(new Event("storage")); // Notify other components
 
-     // Reset the inputs
-     setDay("Maandag");
-     setAmount("");
-   };
-
+    // Reset the inputs
+    setDay("Maandag");
+    setAmount(""); // Reset the amount input field
+  };
 
   return (
     <div className="flex flex-col gap-4">
