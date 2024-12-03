@@ -5,11 +5,13 @@ import { useState } from "react";
 
 export const DrawerExpenses = () => {
    const [day, setDay] = useState<string>("Maandag");
-   const [amount, setAmount] = useState<number>(0);
+   const [amount, setAmount] = useState<string>("");
 
-   const handleAddExpense = () => {
-     if (!amount || amount <= 0) {
-       alert("Please enter a valid amount.");
+  const handleAddExpense = () => {
+    const parsedAmount = parseFloat(amount); 
+
+     if (!amount || parsedAmount <= 0) {
+       alert("Vul een bedrag in");
        return;
      }
 
@@ -33,7 +35,7 @@ export const DrawerExpenses = () => {
 
      // Reset the inputs
      setDay("Maandag");
-     setAmount(0);
+     setAmount("");
    };
 
 
@@ -59,9 +61,9 @@ export const DrawerExpenses = () => {
         <input
           type="number"
           value={amount}
-          onChange={(e) => setAmount(Number(e.target.value))}
+          onChange={(e) => setAmount(e.target.value)}
           className="border rounded p-2"
-          placeholder="Enter expense amount"
+          placeholder="Vul bedrag in"
         />
       </label>
 

@@ -32,13 +32,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {/* Mobile only message */}
-        <div className="hidden fixed inset-0 bg-gray-800 bg-opacity-75 md:flex justify-center items-center z-50">
+        <div className="hidden fixed inset-0 bg-gray-800 bg-opacity-75 sm:flex justify-center items-center z-50">
           <p className="text-white text-center text-xl p-4">
             Op dit moment is Upstart alleen te gebruiken op mobiele apparaten.
           </p>
         </div>
 
-        <div className="max-h-[calc(100vh-3.5rem)] overflow-y-scroll md:hidden">
+        <div className="max-h-[calc(100vh-3.5rem)] overflow-y-scroll sm:hidden">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
