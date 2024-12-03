@@ -41,7 +41,7 @@ export const Navbar = () => {
       </Drawer>
 
       <Link
-        href="#"
+        href="/savings"
         className="flex flex-col items-center justify-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary focus:text-primary"
         prefetch={false}
       >
