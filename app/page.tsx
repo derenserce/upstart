@@ -38,7 +38,8 @@ export default function Home() {
           <li>Vul de details in, zoals de naam, kosten en looptijd.</li>
           <li>Ontvang direct inzicht in je uitgaven en ontdek waar je kunt besparen!</li>
           <li>
-            Wil je [Appnaam] op je telefoon gebruiken als app? Zo installeer je het:
+            Wil je <span className="text-indigo-500">Upstart</span> op je telefoon gebruiken als
+            app? Zo installeer je het:
             <ul className="list-disc list-inside mt-2">
               <li>
                 <strong>Op iPhone</strong>: Open de website in Safari, klik op het deel-icoon
@@ -53,7 +54,7 @@ export default function Home() {
         </ol>
       </div>
 
-      <p className="mt-2 text-sm text-gray-400">
+      <p className="mt-2 mb-2 text-sm text-gray-400">
         Begin vandaag nog en houd je financiën eenvoudig onder controle. 👌
       </p>
     </main>

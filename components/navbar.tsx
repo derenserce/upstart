@@ -24,7 +24,7 @@ export const Navbar = () => {
       </Link>
 
       <Link
-        href="/login"
+        href="/overview"
         className="flex flex-col items-center justify-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary focus:text-primary"
         prefetch={false}
       >
@@ -49,7 +49,7 @@ export const Navbar = () => {
       </Link>
 
       <Link
-        href="/advies"
+        href="/advice"
         className="flex flex-col items-center justify-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary focus:text-primary"
         prefetch={false}
       >
