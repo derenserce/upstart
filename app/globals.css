@@ -73,7 +73,7 @@ body {
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border text-black dark:text-white;
   }
   body {
     @apply bg-background text-foreground;
