@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+import { InstallPWA } from "@/components/install-pwa";
 
 export const metadata: Metadata = {
   title: "Upstart",
@@ -28,16 +29,38 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const ua = navigator.userAgent;
+
+  // if (!ua.includes("standalone")) {
+  //   return (
+  //     <html lang="en">
+  //       <body>
+  //         <div className="max-h-[calc(100vh-3.5rem)] overflow-y-scroll sm:hidden">
+  //           <ThemeProvider
+  //             attribute="class"
+  //             defaultTheme="system"
+  //             enableSystem
+  //             disableTransitionOnChange
+  //           >
+  //             <InstallPWA />
+  //             {children}
+  //           </ThemeProvider>
+  //           <Navbar />
+  //         </div>
+  //       </body>
+  //     </html>
+  //   )
+  // }
+
   return (
     <html lang="en">
       <body>
         {/* Mobile only message */}
-        <div className="hidden fixed inset-0 bg-gray-800 bg-opacity-75 sm:flex justify-center items-center z-50">
+        <div className="hidden fixed inset-0 sm:flex justify-center items-center">
           <p className="text-white text-center text-xl p-4">
             Op dit moment is Upstart alleen te gebruiken op mobiele apparaten.
           </p>
         </div>
-
         <div className="max-h-[calc(100vh-3.5rem)] overflow-y-scroll sm:hidden">
           <ThemeProvider
             attribute="class"
@@ -45,6 +68,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            {ua.toLowerCase()}
             {children}
           </ThemeProvider>
           <Navbar />
