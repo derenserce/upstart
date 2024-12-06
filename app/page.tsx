@@ -1,7 +1,11 @@
+import { Install } from "@/components/install";
+
 export default function Home() {
   return (
     <main className="flex flex-col px-6 pt-6 mx-auto">
-      <h1 className="text-3xl font-bold mb-6">
+      <Install />
+
+      <h1 className="text-3xl font-bold mb-2">
         Welkom bij <span className="text-indigo-500">Upstart</span>!
       </h1>
       <p className="text-base mb-6">
@@ -37,20 +41,6 @@ export default function Home() {
           </li>
           <li>Vul de details in, zoals de naam, kosten en looptijd.</li>
           <li>Ontvang direct inzicht in je uitgaven en ontdek waar je kunt besparen!</li>
-          <li>
-            Wil je <span className="text-indigo-500">Upstart</span> op je telefoon gebruiken als
-            app? Zo installeer je het:
-            <ul className="list-disc list-inside mt-2">
-              <li>
-                <strong>Op iPhone</strong>: Open de website in Safari, klik op het deel-icoon
-                (vierkant met pijl) en kies <em>"Zet op beginscherm"</em>.
-              </li>
-              <li>
-                <strong>Op Android</strong>: Klik op het menu (meestal drie stipjes bovenin je
-                browser) en kies <em>"Toevoegen aan startscherm"</em>.
-              </li>
-            </ul>
-          </li>
         </ol>
       </div>
 

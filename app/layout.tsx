@@ -32,10 +32,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Install />
         {/* Mobile only message */}
         <div className="hidden fixed inset-0 sm:flex justify-center items-center">
-          <p className="text-white text-center text-xl p-4">
+          <p className="text-center text-xl p-4">
             Op dit moment is Upstart alleen te gebruiken op mobiele apparaten.
           </p>
         </div>
