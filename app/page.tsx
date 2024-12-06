@@ -1,3 +1,5 @@
+"use client";
+
 import { Install } from "@/components/install";
 
 export default function Home() {
