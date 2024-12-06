@@ -17,6 +17,7 @@
   ],
   "orientation": "any",
   "display": "standalone",
+  "description": "Upstart is de financiën app voor starters.",
   "dir": "auto",
   "lang": "en-US",
   "name": "Upstart",

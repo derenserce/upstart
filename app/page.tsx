@@ -1,9 +1,6 @@
-import { InstallPWA } from "@/components/install-pwa";
-
 export default function Home() {
   return (
     <main className="flex flex-col px-6 pt-6 mx-auto">
-      <InstallPWA />
       <h1 className="text-3xl font-bold mb-6">
         Welkom bij <span className="text-indigo-500">Upstart</span>!
       </h1>

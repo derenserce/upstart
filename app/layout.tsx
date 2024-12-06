@@ -2,11 +2,11 @@ import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
-import { InstallPWA } from "@/components/install-pwa";
+import { Install } from "@/components/install";
 
 export const metadata: Metadata = {
   title: "Upstart",
-  description: "De financien app voor starters",
+  description: "Upstart is de financiën app voor starters.",
   generator: "Next.js",
   manifest: "/manifest.json",
   icons: [
@@ -19,9 +19,9 @@ export const viewport: Viewport = {
   initialScale: 1,
   minimumScale: 1,
   maximumScale: 1,
+  themeColor: "#080c14",
   width: "device-width",
   userScalable: false,
-  themeColor: "#080c14",
 };
 
 export default function RootLayout({
@@ -32,6 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Install />
         {/* Mobile only message */}
         <div className="hidden fixed inset-0 sm:flex justify-center items-center">
           <p className="text-white text-center text-xl p-4">
