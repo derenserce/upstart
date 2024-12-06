@@ -49,7 +49,7 @@ export const InstallPWA: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen sm:hidden">
+    <div className="flex flex-col justify-center items-center">
       {deferredEvent && (
         <>
           <button

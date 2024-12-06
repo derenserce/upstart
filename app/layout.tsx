@@ -29,29 +29,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const ua = navigator.userAgent;
-
-  // if (!ua.includes("standalone")) {
-  //   return (
-  //     <html lang="en">
-  //       <body>
-  //         <div className="max-h-[calc(100vh-3.5rem)] overflow-y-scroll sm:hidden">
-  //           <ThemeProvider
-  //             attribute="class"
-  //             defaultTheme="system"
-  //             enableSystem
-  //             disableTransitionOnChange
-  //           >
-  //             <InstallPWA />
-  //             {children}
-  //           </ThemeProvider>
-  //           <Navbar />
-  //         </div>
-  //       </body>
-  //     </html>
-  //   )
-  // }
-
   return (
     <html lang="en">
       <body>
@@ -68,7 +45,6 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {ua.toLowerCase()}
             {children}
           </ThemeProvider>
           <Navbar />
