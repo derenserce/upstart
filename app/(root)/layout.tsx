@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
-import "./globals.css";
 import { Navbar } from "@/components/navbar";
-import { Install } from "@/components/install";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Upstart",
