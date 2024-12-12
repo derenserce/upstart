@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 export const Install = () => {
   const [installPrompt, setInstallPrompt] = useState(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const handleBeforeInstallPrompt = (event: any) => {
