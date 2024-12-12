@@ -1,11 +1,9 @@
-"use client";
-
 import { Install } from "@/components/install";
 
 export default function Home() {
   return (
     <main className="flex flex-col px-6 pt-6 mx-auto">
-      <Install />
+      <Install  />
 
       <h1 className="text-3xl font-bold mb-2">
         Welkom bij <span className="text-indigo-500">Upstart</span>!
